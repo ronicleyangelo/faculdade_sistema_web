@@ -1,0 +1,19 @@
+{
+    "name": "faculdade_sistema_web",
+    "version": "1.0.0",
+    "private": true,
+    "type": "commonjs",
+    "scripts": {
+        "server1": "node servidor1/app.js",
+        "server2": "node servidor2/app.js",
+        "server3": "node servidor3/app.js"
+    },
+    "dependencies": {
+        "express": "^5.2.1"
+    },
+    "devDependencies": {
+        "eslint": "^10.10.0",
+        "nodemon": "^3.1.14",
+        "prettier": "^3.9.6"
+    }
+}

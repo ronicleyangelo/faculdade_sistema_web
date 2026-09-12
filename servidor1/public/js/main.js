@@ -18,9 +18,15 @@ async function loadStatus() {
 
     try {
         const data = await checkBackend();
-        updateStatus(true, `${data.message} às ${new Date(data.timestamp).toLocaleTimeString('pt-BR')}.`);
-    } catch (error) {
-        updateStatus(false, 'Não foi possível acessar o backend. Confirme se o servidor está rodando.');
+        updateStatus(
+            true,
+            `${data.message} às ${new Date(data.timestamp).toLocaleTimeString('pt-BR')}.`
+        );
+    } catch {
+        updateStatus(
+            false,
+            'Não foi possível acessar o backend. Confirme se o servidor está rodando.'
+        );
     } finally {
         checkButton.disabled = false;
     }
